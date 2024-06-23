@@ -155,6 +155,48 @@ export const Skill_data = [
     width: 50,
     height: 50,
   },
+  {
+    skill_name: "OKR",
+    Image: "/okr.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Vite",
+    Image: "/vite.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Vue.js",
+    Image: "/vue.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "VueX",
+    Image: "/vuex.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Wordpress",
+    Image: "/wordpress.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Elementor",
+    Image: "/elementor.webp",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Jira",
+    Image: "/jira.webp",
+    width: 70,
+    height: 70,
+  },
 ];
 
 export const Socials = [
