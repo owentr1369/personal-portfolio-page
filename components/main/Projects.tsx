@@ -13,9 +13,8 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10 flex-wrap">
         {ProjectsData.map((project, index) => (
-          <div style={{ width: "calc(100% / 3 - 1.68rem)" }}>
+          <div style={{ width: "calc(100% / 3 - 1.68rem)" }} key={index}>
             <ProjectCard
-              key={index}
               src={project.src}
               title={project.title}
               description={project.description}
