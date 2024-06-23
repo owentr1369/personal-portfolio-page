@@ -158,17 +158,35 @@ export const Skill_data = [
 ];
 
 export const Socials = [
+  // {
+  //   name: "Discord",
+  //   src: "/instagram.svg",
+  //   url: "",
+  // },
+  // {
+  //   name: "Facebook",
+  //   src: "/facebook.svg",
+  //   url: "",
+  // },
+  // {
+  //   name: "Instagram",
+  //   src: "/discord.svg",
+  //   url: "",
+  // },
   {
-    name: "Discord",
-    src: "/instagram.svg",
+    name: "Linkedin",
+    src: "/linkedin.svg",
+    url: "https://www.linkedin.com/in/tamtamjs/",
   },
   {
-    name: "Facebook",
-    src: "/facebook.svg",
+    name: "Freelancer.com",
+    src: "/freelancer.svg",
+    url: "https://www.freelancer.com/u/tamvaa1306",
   },
   {
-    name: "Instagram",
-    src: "/discord.svg",
+    name: "Upwork.com",
+    src: "/upwork.svg",
+    url: "https://www.upwork.com/freelancers/thientamt",
   },
 ];
 
