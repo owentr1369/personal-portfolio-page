@@ -2,6 +2,7 @@ import Hero from "../components/main/Hero";
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
 import Encryption from "@/components/main/Encryption";
+import '../assets/main.scss'
 
 export default function Home() {
   return (
