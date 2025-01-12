@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import RatingStars from "./RatingStars";
 
 interface Props {
   src: string;
@@ -19,9 +18,6 @@ const ProjectCard = ({ src, title, description }: Props) => {
         className="w-full object-contain h-[160px] object-cover"
       />
       <div className="relative p-4">
-        {/* <div className="rating  bg-clip-text bg-white " style={{ WebkitTextFillColor: 'transparent' }}>
-          <RatingStars />
-        </div> */}
         <h1 className="text-2xl font-semibold text-white">{title}</h1>
         <p className="mt-2 text-gray-300">{description}</p>
       </div>
