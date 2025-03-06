@@ -3,13 +3,9 @@ import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
 import Encryption from "@/components/main/Encryption";
 import "../assets/main.scss";
-import Hotjar from "@hotjar/browser";
+import HotjarTracker from "@/components/HotjarTracker";
 
 export default function Home() {
-  const siteId = 5327937;
-  const hotjarVersion = 6;
-
-  Hotjar.init(siteId, hotjarVersion);
   return (
     <main className="h-full w-full">
       <div className="flex flex-col gap-20">
@@ -17,6 +13,7 @@ export default function Home() {
         <Skills />
         <Encryption />
         <Projects />
+        <HotjarTracker />
       </div>
     </main>
   );
