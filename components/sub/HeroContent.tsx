@@ -24,7 +24,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Thien Tam T.&apos;s Portfolio
+            Senior Frontend Engineer · AI-Powered Dev
           </h1>
         </motion.div>
         <motion.div
@@ -32,28 +32,30 @@ const HeroContent = () => {
           className="flex flex-col gap-6 mt-6 text-4xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Providing
+            Building
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              the best{" "}
+              faster &{" "}
             </span>
-            project experience
+            smarter with AI
           </span>
         </motion.div>
         <motion.p
           variants={slideInFromLeft(0.8)}
           className="text-base md:text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I&apos;m a Frontend Developer with nearly 2 years of experience in
-          building web applications. I specialize in JavaScript and have
-          professional experience working with React and Vue. Check out my
-          projects and skills.
+          Senior Frontend Engineer with 4+ years shipping production-grade web
+          apps. I integrate AI into every stage of development — turning complex
+          problems into elegant solutions, faster than ever. Specialized in
+          React, Vue, and Next.js with a sharp eye for performance and clean
+          code.
         </motion.p>
         <motion.a
+          href="#projects"
           variants={slideInFromLeft(1)}
           className="py-2 min-w-[200px] button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
-          Learn More!
+          See My Work
         </motion.a>
       </div>
       <motion.div
