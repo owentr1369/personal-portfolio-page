@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2a0e61]/50 bg-[#030014]/80 backdrop-blur-md z-50 px-10">
+      <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2a0e61]/50 bg-[#030014]/80 backdrop-blur-md z-50 md:px-10 px-4">
         <div className="h-full w-full flex flex-row items-center justify-between m-auto px-[10px]">
           {/* Logo */}
           <a
@@ -30,13 +30,22 @@ const Navbar = () => {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center h-auto border border-[#7042f861] bg-[#0300145e] px-[20px] py-[10px] rounded-full text-gray-200 gap-8">
-            <a href="#about-me" className="cursor-pointer hover:text-white transition-colors">
+            <a
+              href="#about-me"
+              className="cursor-pointer hover:text-white transition-colors"
+            >
               About me
             </a>
-            <a href="#skills" className="cursor-pointer hover:text-white transition-colors">
+            <a
+              href="#skills"
+              className="cursor-pointer hover:text-white transition-colors"
+            >
               Skills
             </a>
-            <a href="#projects" className="cursor-pointer hover:text-white transition-colors">
+            <a
+              href="#projects"
+              className="cursor-pointer hover:text-white transition-colors"
+            >
               Projects
             </a>
           </div>
@@ -62,12 +71,36 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             {menuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             )}
           </button>
@@ -110,7 +143,12 @@ const Navbar = () => {
                 key={index}
                 onClick={() => setMenuOpen(false)}
               >
-                <Image src={social.src} alt={social.name} width={28} height={28} />
+                <Image
+                  src={social.src}
+                  alt={social.name}
+                  width={28}
+                  height={28}
+                />
               </a>
             ))}
           </div>
