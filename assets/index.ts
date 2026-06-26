@@ -246,6 +246,11 @@ export const Socials = [
   //   url: "",
   // },
   {
+    name: "Github",
+    src: "/github-142-svgrepo-com.svg",
+    url: "https://github.com/owentr1369",
+  },
+  {
     name: "Linkedin",
     src: "/linkedin.svg",
     url: "https://www.linkedin.com/in/tamtamjs/",

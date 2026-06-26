@@ -53,7 +53,14 @@ const Navbar = () => {
           {/* Desktop Socials */}
           <div className="hidden md:flex flex-row gap-5">
             {Socials.map((social, index) => (
-              <a href={social.url} target="_blank" key={index}>
+              <a
+                href={social.url}
+                target="_blank"
+                key={index}
+                style={{
+                  filter: social.name == "Github" ? "invert(1)" : "none",
+                }}
+              >
                 <Image
                   src={social.src}
                   alt={social.name}
@@ -142,6 +149,9 @@ const Navbar = () => {
                 target="_blank"
                 key={index}
                 onClick={() => setMenuOpen(false)}
+                style={{
+                  filter: social.name == "Github" ? "invert(1)" : "none",
+                }}
               >
                 <Image
                   src={social.src}
