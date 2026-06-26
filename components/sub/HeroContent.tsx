@@ -30,10 +30,11 @@ const HeroContent = () => {
         <motion.div
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-6 mt-6 text-4xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
         >
           <span>
             Building
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-purple-500">
               {" "}
               faster &{" "}
             </span>
@@ -43,6 +44,7 @@ const HeroContent = () => {
         <motion.p
           variants={slideInFromLeft(0.8)}
           className="text-base md:text-lg text-gray-400 my-5 max-w-[600px]"
+          style={{ textShadow: "0 1px 10px rgba(0,0,0,0.8)" }}
         >
           Senior Frontend Engineer with 4+ years shipping production-grade web
           apps. I integrate AI into every stage of development — turning complex
