@@ -32,11 +32,7 @@ const Projects = () => {
         {ProjectsData.map((project, index) => (
           <ProjectCard
             key={index}
-            src={project.src}
-            title={project.title}
-            description={project.description}
-            technologies={project.technologies}
-            url={project.url}
+            project={project}
             onClick={() => setSelected(project)}
           />
         ))}
@@ -66,21 +62,27 @@ const Projects = () => {
                   <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight">
                     {selected.title}
                   </h2>
+                  {selected.role && (
+                    <p className="text-sm text-purple-400 font-medium mt-2">
+                      {selected.role}
+                    </p>
+                  )}
                   <p className="mt-4 text-gray-300 text-sm leading-relaxed">
                     {selected.description}
                   </p>
-                  {selected.technologies && selected.technologies.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-6">
-                      {selected.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 text-xs rounded-full border border-purple-500/50 text-purple-300 bg-purple-500/10"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  )}
+                  {selected.technologies &&
+                    selected.technologies.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-6">
+                        {selected.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-2 py-1 text-xs rounded-full border border-purple-500/50 text-purple-300 bg-purple-500/10"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                 </div>
                 {selected.url && (
                   <Button

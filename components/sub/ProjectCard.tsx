@@ -2,17 +2,18 @@
 
 import Image from "next/image";
 import React from "react";
+import { ProjectsData } from "@/assets/projects";
+
+type Project = (typeof ProjectsData)[number];
 
 interface Props {
-  src: string;
-  title: string;
-  description: string;
-  technologies?: string[];
-  url?: string;
+  project: Project;
   onClick: () => void;
 }
 
-const ProjectCard = ({ src, title, description, technologies, onClick }: Props) => {
+const ProjectCard = ({ project, onClick }: Props) => {
+  const { src, title, description, technologies, role } = project;
+
   return (
     <div
       onClick={onClick}
@@ -26,7 +27,12 @@ const ProjectCard = ({ src, title, description, technologies, onClick }: Props) 
         className="w-full object-cover h-[160px] group-hover:opacity-80 transition-opacity duration-300"
       />
       <div className="relative p-4 flex flex-col flex-1">
-        <h1 className="text-lg md:text-2xl font-semibold text-white">{title}</h1>
+        <h1 className="text-lg md:text-2xl font-semibold text-white">
+          {title}
+        </h1>
+        {role && (
+          <p className="text-xs text-purple-400 mt-1 font-medium">{role}</p>
+        )}
         <p className="mt-2 text-gray-300 text-sm flex-1">{description}</p>
         {technologies && technologies.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-4">
