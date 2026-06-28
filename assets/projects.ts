@@ -19,7 +19,7 @@ export const ProjectsData = [
   },
   {
     src: "/Project9.png",
-    title: "Promer Creative Studio",
+    title: "Promer – Creative Studio",
     url: "https://app.promer.ai/",
     role: "Frontend Engineer",
     description:
@@ -52,7 +52,7 @@ export const ProjectsData = [
   },
   {
     src: "/Project13.png",
-    title: "Promer Blog Studio",
+    title: "Promer  – Blog Studio",
     url: "https://apps.shopify.com/promer-blog-studio?surface_intra_position=2&surface_type=partners&surface_version=simplified",
     role: "Frontend Engineer",
     description:
