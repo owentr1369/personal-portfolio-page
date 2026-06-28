@@ -106,7 +106,7 @@ export const ProjectsData = [
     technologies: ["WordPress", "Elementor", "CSS"],
   },
   {
-    src: "/Project2.png",
+    src: "/Project17.png",
     title: "Auto Buy CSMoney Chrome Extension",
     role: "Chrome Extension Developer",
     description:
