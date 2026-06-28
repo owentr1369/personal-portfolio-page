@@ -1,5 +1,13 @@
 export const ProjectsData = [
   {
+    src: "/Project15.png",
+    title: "Promer – AI Ad Platform",
+    url: "https://promer.ai/",
+    description:
+      "Landing page for Promer — an AI platform that turns any product URL into winning ads, with 5-star rating on Shopify and 3,000+ merchants.",
+    technologies: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "SSG"],
+  },
+  {
     src: "/Project9.png",
     title: "Promer Creative Studio",
     description:
@@ -14,6 +22,7 @@ export const ProjectsData = [
       "Chrome Extension",
       "WebSockets",
     ],
+    url: "https://app.promer.ai/",
   },
   {
     src: "/Project10.png",
