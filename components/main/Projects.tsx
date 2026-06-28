@@ -18,6 +18,8 @@ const Projects = () => {
             src={project.src}
             title={project.title}
             description={project.description}
+            technologies={project.technologies}
+            url={project.url}
           />
         ))}
       </div>
