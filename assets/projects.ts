@@ -30,12 +30,26 @@ export const ProjectsData = [
     ],
   },
   {
+    src: "/Project14.png",
+    title: "East by Ngô Thanh Hòa",
+    url: "https://eastbyngothanhhoa.com/",
+    description:
+      "Restaurant website for Chef Ngô Thanh Hòa — featuring contemporary Vietnamese cuisine with menu, reservation, and inspiration sections.",
+    technologies: ["WordPress", "Elementor", "CSS"],
+  },
+  {
     src: "/Project13.png",
     title: "Promer Blog Studio",
     url: "https://apps.shopify.com/promer-blog-studio?surface_intra_position=2&surface_type=partners&surface_version=simplified",
     description:
       "Shopify app for AI-powered blog creation, helping merchants generate SEO-optimized blog posts to drive organic traffic and boost store visibility.",
-    technologies: ["React.js", "Remix.js", "TypeScript", "Shopify", "Tailwind CSS"],
+    technologies: [
+      "React.js",
+      "Remix.js",
+      "TypeScript",
+      "Shopify",
+      "Tailwind CSS",
+    ],
   },
   {
     src: "/Project11.png",
