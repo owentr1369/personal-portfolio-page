@@ -1,5 +1,55 @@
 export const ProjectsData = [
   {
+    src: "/Project9.png",
+    title: "Promer Creative Studio",
+    description:
+      "AI-powered platform for generating ad creatives (image, video, copy) from product data. Achieved 'Built for Shopify' badge, 5-star rating, and Shopify Feature Spotlight across Europe & Americas.",
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Remix.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shopify",
+      "Chrome Extension",
+      "WebSockets",
+    ],
+  },
+  {
+    src: "/Project10.png",
+    title: "Promer – AI Content & Store Audit",
+    description:
+      "Shopify apps for AI-generated SEO product descriptions and blogs, plus automated store audits covering SEO, page speed, and UX with actionable CRO recommendations.",
+    technologies: [
+      "React.js",
+      "Remix.js",
+      "TypeScript",
+      "Shopify",
+      "Tailwind CSS",
+      "WebSockets",
+    ],
+  },
+  {
+    src: "/Project11.png",
+    title: "Internal LMS & Bulletin Board",
+    description:
+      "Internal platforms for employee training and company-wide communication, featuring course management, real-time posts, reactions, comments, and a gift exchange system.",
+    technologies: ["Vue.js 3", "TypeScript", "Vuex", "WebSockets", "SCSS"],
+  },
+  {
+    src: "/Project12.png",
+    title: "Internal Ops & CS Tools",
+    description:
+      "Internal systems for affiliate management, KPI tracking, and revenue reporting, plus a Chrome extension to streamline Customer Service ticket handling.",
+    technologies: [
+      "Vue.js",
+      "TypeScript",
+      "JavaScript",
+      "Chrome Extension",
+      "SCSS",
+    ],
+  },
+  {
     src: "/Project1.png",
     title: "MTConsulting Website",
     url: "https://mtconsultingvn.com/",
@@ -18,8 +68,7 @@ export const ProjectsData = [
     src: "/Project3.png",
     title: "Bohum Insurance Website",
     url: "https://child.bohumdoctorplus.com/",
-    description:
-      "Insurance website for Bohum with Web API integration.",
+    description: "Insurance website for Bohum with Web API integration.",
     technologies: ["HTML", "SCSS", "Bootstrap", "JavaScript", "Web API"],
   },
   {
