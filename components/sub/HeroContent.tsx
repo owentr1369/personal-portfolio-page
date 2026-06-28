@@ -9,6 +9,9 @@ import {
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
+
+const MotionButton = motion(Button);
 
 const HeroContent = () => {
   return (
@@ -52,13 +55,9 @@ const HeroContent = () => {
           React, Vue, and Next.js with a sharp eye for performance and clean
           code.
         </motion.p>
-        <motion.a
-          href="#projects"
-          variants={slideInFromLeft(1)}
-          className="py-2 min-w-[200px] button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        >
+        <MotionButton href="#projects" variants={slideInFromLeft(1)}>
           See My Work
-        </motion.a>
+        </MotionButton>
       </div>
       <motion.div
         variants={slideInFromRight(0.8)}
