@@ -1,5 +1,13 @@
 export const ProjectsData = [
   {
+    src: "/Project16.png",
+    title: "EngChamp",
+    url: "https://engchamp.com/",
+    description:
+      "English learning platform gamified like an RPG — learn vocabulary through real passages, earn XP, and climb leaderboards from A1 to IELTS-ready C1.",
+    technologies: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
     src: "/Project15.png",
     title: "Promer – AI Ad Platform",
     url: "https://promer.ai/",
