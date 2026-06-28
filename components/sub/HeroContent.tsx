@@ -27,7 +27,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Senior Frontend Engineer · AI-Powered Dev
+            Tran Thien Tam · Senior Frontend Engineer
           </h1>
         </motion.div>
         <motion.div
@@ -36,12 +36,12 @@ const HeroContent = () => {
           style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
         >
           <span>
-            Building
+            Shipping
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-purple-500">
               {" "}
-              faster &{" "}
+              high-impact{" "}
             </span>
-            smarter with AI
+            products with AI
           </span>
         </motion.div>
         <motion.p
@@ -49,11 +49,11 @@ const HeroContent = () => {
           className="text-base md:text-lg text-gray-400 my-5 max-w-[600px]"
           style={{ textShadow: "0 1px 10px rgba(0,0,0,0.8)" }}
         >
-          Senior Frontend Engineer with 4+ years shipping production-grade web
-          apps. I integrate AI into every stage of development — turning complex
-          problems into elegant solutions, faster than ever. Specialized in
-          React, Vue, and Next.js with a sharp eye for performance and clean
-          code.
+          Senior Frontend Engineer with 4+ years of experience across web apps,
+          Shopify apps, and Chrome extensions. Built AI-powered creative
+          platforms recognized by Shopify Feature Spotlight — specialized in
+          React, Vue, Next.js, and TypeScript with a focus on performance and
+          scalable architecture.
         </motion.p>
         <MotionButton href="#projects" variants={slideInFromLeft(1)}>
           See My Work
