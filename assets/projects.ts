@@ -17,9 +17,9 @@ export const ProjectsData = [
   },
   {
     src: "/Project10.png",
-    title: "Promer – AI Content & Store Audit",
+    title: "Promer – AI Product Copy & Store Audit",
     description:
-      "Shopify apps for AI-generated SEO product descriptions and blogs, plus automated store audits covering SEO, page speed, and UX with actionable CRO recommendations.",
+      "Shopify apps for AI-generated SEO product descriptions and automated store audits covering SEO, page speed, and UX with actionable CRO recommendations.",
     technologies: [
       "React.js",
       "Remix.js",
@@ -28,6 +28,14 @@ export const ProjectsData = [
       "Tailwind CSS",
       "WebSockets",
     ],
+  },
+  {
+    src: "/Project13.png",
+    title: "Promer Blog Studio",
+    url: "https://apps.shopify.com/promer-blog-studio?surface_intra_position=2&surface_type=partners&surface_version=simplified",
+    description:
+      "Shopify app for AI-powered blog creation, helping merchants generate SEO-optimized blog posts to drive organic traffic and boost store visibility.",
+    technologies: ["React.js", "Remix.js", "TypeScript", "Shopify", "Tailwind CSS"],
   },
   {
     src: "/Project11.png",
