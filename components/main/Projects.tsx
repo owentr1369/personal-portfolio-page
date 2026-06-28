@@ -32,11 +32,7 @@ const Projects = () => {
         {ProjectsData.map((project, index) => (
           <ProjectCard
             key={index}
-            src={project.src}
-            title={project.title}
-            description={project.description}
-            technologies={project.technologies}
-            url={project.url}
+            project={project}
             onClick={() => setSelected(project)}
           />
         ))}
@@ -53,7 +49,7 @@ const Projects = () => {
             transition={{ duration: 0.2 }}
           >
             <motion.div
-              className="relative bg-[#0F0F1A] border border-[#2A0E61] rounded-xl shadow-2xl w-[80vw] max-w-[1200px] overflow-hidden flex flex-col md:flex-row md:min-h-[560px]"
+              className="relative bg-[#0F0F1A] border border-[#2A0E61] rounded-xl shadow-2xl w-[80vw] max-w-[1200px] overflow-hidden flex flex-col-reverse md:flex-row md:min-h-[560px]"
               onClick={(e) => e.stopPropagation()}
               initial={{ opacity: 0, scale: 0.92, y: 24 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -61,26 +57,32 @@ const Projects = () => {
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
               {/* Left — info */}
-              <div className="flex flex-col justify-between p-8 md:w-[40%] overflow-y-auto max-h-[80vh]">
+              <div className="flex flex-col justify-between md:p-8 p-3 md:w-[40%] overflow-y-auto max-h-[80vh]">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight">
                     {selected.title}
                   </h2>
+                  {selected.role && (
+                    <p className="text-sm text-purple-400 font-medium mt-2">
+                      {selected.role}
+                    </p>
+                  )}
                   <p className="mt-4 text-gray-300 text-sm leading-relaxed">
                     {selected.description}
                   </p>
-                  {selected.technologies && selected.technologies.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-6">
-                      {selected.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 text-xs rounded-full border border-purple-500/50 text-purple-300 bg-purple-500/10"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  )}
+                  {selected.technologies &&
+                    selected.technologies.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-6">
+                        {selected.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-2 py-1 text-xs rounded-full border border-purple-500/50 text-purple-300 bg-purple-500/10"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                 </div>
                 {selected.url && (
                   <Button
@@ -88,8 +90,9 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-8 inline-block"
+                    size="sm"
                   >
-                    View Project →
+                    View Project
                   </Button>
                 )}
               </div>
