@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { ProjectsData } from "@/assets/projects";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 type Project = (typeof ProjectsData)[number];
 
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const ProjectCard = ({ project, onClick }: Props) => {
+  const { language } = useLanguage();
   const { src, title, description, technologies, role } = project;
 
   return (
@@ -31,9 +33,13 @@ const ProjectCard = ({ project, onClick }: Props) => {
           {title}
         </h1>
         {role && (
-          <p className="text-xs text-purple-400 mt-1 font-medium">{role}</p>
+          <p className="text-xs text-purple-400 mt-1 font-medium">
+            {role[language]}
+          </p>
         )}
-        <p className="mt-2 text-gray-300 text-sm flex-1">{description}</p>
+        <p className="mt-2 text-gray-300 text-sm flex-1">
+          {description[language]}
+        </p>
         {technologies && technologies.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-4">
             {technologies.map((tech) => (
