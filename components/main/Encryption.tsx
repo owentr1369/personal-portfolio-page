@@ -4,8 +4,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
 import Image from "next/image";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const Encryption = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="flex flex-row relative items-center justify-center min-h-[50vh] md:min-h-screen w-full h-full">
       <div className="absolute w-auto h-auto top-0 z-[5]">
@@ -13,12 +16,12 @@ const Encryption = () => {
           variants={slideInFromTop}
           className="text-2xl md:text-[40px] font-medium text-center text-gray-200 px-4"
         >
-          Performance
+          {t.encryption.heading.prefix}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
             {" "}
-            &{" "}
+            {t.encryption.heading.amp}{" "}
           </span>
-          Security
+          {t.encryption.heading.suffix}
         </motion.div>
       </div>
 
@@ -41,12 +44,12 @@ const Encryption = () => {
         </div>
 
         <div className="Welcome-box px-[15px] py-[4px] z-[20] brder my-[20px] border-[#7042f88b] opacity-[0.9]">
-          <h1 className="Welcome-text text-[12px]">Encryption</h1>
+          <h1 className="Welcome-text text-[12px]">{t.encryption.badge}</h1>
         </div>
       </div>
       <div className="absolute z-[20] bottom-[10px] px-[5px]">
         <div className="cursive text-sm md:text-[20px] font-medium text-center text-gray-300 px-6">
-          Secure your data with end-to-end encryption
+          {t.encryption.caption}
         </div>
       </div>
 
