@@ -10,10 +10,13 @@ import {
 import { SparklesIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const MotionButton = motion(Button);
 
 const HeroContent = () => {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       initial="hidden"
@@ -26,9 +29,7 @@ const HeroContent = () => {
           className="Welcome-box py-[8px] px-[14px] border border-[#7042F99B] opacity-[0.9]"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[13px]">
-            Tran Thien Tam · Senior Frontend Engineer
-          </h1>
+          <h1 className="Welcome-text text-[13px]">{t.hero.badge}</h1>
         </motion.div>
         <motion.div
           variants={slideInFromLeft(0.5)}
@@ -36,12 +37,12 @@ const HeroContent = () => {
           style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
         >
           <span>
-            Shipping
+            {t.hero.headline.prefix}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-purple-500">
               {" "}
-              high-impact{" "}
+              {t.hero.headline.highlight}{" "}
             </span>
-            products with AI
+            {t.hero.headline.suffix}
           </span>
         </motion.div>
         <motion.p
@@ -49,14 +50,10 @@ const HeroContent = () => {
           className="text-base md:text-lg text-gray-400 my-5 max-w-[600px]"
           style={{ textShadow: "0 1px 10px rgba(0,0,0,0.8)" }}
         >
-          Senior Frontend Engineer with 4+ years of experience across web apps,
-          Shopify apps, and Chrome extensions. Built AI-powered creative
-          platforms recognized by Shopify Feature Spotlight — specialized in
-          React, Vue, Next.js, and TypeScript with a focus on performance and
-          scalable architecture.
+          {t.hero.bio}
         </motion.p>
         <MotionButton href="#projects" variants={slideInFromLeft(1)}>
-          See My Work
+          {t.hero.ctaButton}
         </MotionButton>
       </div>
       <motion.div

@@ -3,9 +3,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Socials } from "@/assets/index";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <>
@@ -34,24 +37,24 @@ const Navbar = () => {
               href="#about-me"
               className="cursor-pointer hover:text-white transition-colors"
             >
-              About me
+              {t.nav.aboutMe}
             </a>
             <a
               href="#skills"
               className="cursor-pointer hover:text-white transition-colors"
             >
-              Skills
+              {t.nav.skills}
             </a>
             <a
               href="#projects"
               className="cursor-pointer hover:text-white transition-colors"
             >
-              Projects
+              {t.nav.projects}
             </a>
           </div>
 
           {/* Desktop Socials */}
-          <div className="hidden md:flex flex-row gap-5">
+          <div className="hidden md:flex flex-row items-center gap-5">
             {Socials.map((social, index) => (
               <a
                 href={social.url}
@@ -69,6 +72,7 @@ const Navbar = () => {
                 />
               </a>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Hamburger Button (mobile only) */}
@@ -126,41 +130,44 @@ const Navbar = () => {
             className="text-2xl font-semibold py-4 cursor-pointer hover:text-white transition-colors border-b border-[#7042f820]"
             onClick={() => setMenuOpen(false)}
           >
-            About me
+            {t.nav.aboutMe}
           </a>
           <a
             href="#skills"
             className="text-2xl font-semibold py-4 cursor-pointer hover:text-white transition-colors border-b border-[#7042f820]"
             onClick={() => setMenuOpen(false)}
           >
-            Skills
+            {t.nav.skills}
           </a>
           <a
             href="#projects"
             className="text-2xl font-semibold py-4 cursor-pointer hover:text-white transition-colors"
             onClick={() => setMenuOpen(false)}
           >
-            Projects
+            {t.nav.projects}
           </a>
-          <div className="mt-auto pt-6 border-t border-[#7042f861] flex flex-row gap-6">
-            {Socials.map((social, index) => (
-              <a
-                href={social.url}
-                target="_blank"
-                key={index}
-                onClick={() => setMenuOpen(false)}
-                style={{
-                  filter: social.name == "Github" ? "invert(1)" : "none",
-                }}
-              >
-                <Image
-                  src={social.src}
-                  alt={social.name}
-                  width={28}
-                  height={28}
-                />
-              </a>
-            ))}
+          <div className="mt-auto pt-6 border-t border-[#7042f861] flex flex-row items-center justify-between gap-6">
+            <div className="flex flex-row gap-6">
+              {Socials.map((social, index) => (
+                <a
+                  href={social.url}
+                  target="_blank"
+                  key={index}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    filter: social.name == "Github" ? "invert(1)" : "none",
+                  }}
+                >
+                  <Image
+                    src={social.src}
+                    alt={social.name}
+                    width={28}
+                    height={28}
+                  />
+                </a>
+              ))}
+            </div>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

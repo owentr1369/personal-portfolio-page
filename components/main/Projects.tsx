@@ -6,11 +6,13 @@ import Image from "next/image";
 import ProjectCard from "../sub/ProjectCard";
 import Button from "../ui/Button";
 import { ProjectsData } from "@/assets/projects";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 type Project = (typeof ProjectsData)[number];
 
 const Projects = () => {
   const [selected, setSelected] = useState<Project | null>(null);
+  const { language, t } = useLanguage();
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -26,7 +28,7 @@ const Projects = () => {
       id="projects"
     >
       <h1 className="text-2xl md:text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 md:py-20">
-        My Projects
+        {t.projects.heading}
       </h1>
       <div className="h-full w-full max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-10">
         {ProjectsData.map((project, index) => (
@@ -64,11 +66,11 @@ const Projects = () => {
                   </h2>
                   {selected.role && (
                     <p className="text-sm text-purple-400 font-medium mt-2">
-                      {selected.role}
+                      {selected.role[language]}
                     </p>
                   )}
                   <p className="mt-4 text-gray-300 text-sm leading-relaxed">
-                    {selected.description}
+                    {selected.description[language]}
                   </p>
                   {selected.technologies &&
                     selected.technologies.length > 0 && (
@@ -92,7 +94,7 @@ const Projects = () => {
                     className="mt-8 inline-block"
                     size="sm"
                   >
-                    View Project
+                    {t.projects.viewProject}
                   </Button>
                 )}
               </div>
