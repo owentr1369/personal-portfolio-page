@@ -1,5 +1,14 @@
 export const ProjectsData = [
   {
+    src: "/Project17.png",
+    title: "9SpaceX",
+    url: "https://www.9spacex.com/",
+    role: "Shopify Theme Developer",
+    description:
+      "Shopify store for 9SpaceX — a workspace accessories brand. Built and customized the theme to deliver a clean, high-converting storefront experience.",
+    technologies: ["Shopify", "Liquid", "CSS", "JavaScript"],
+  },
+  {
     src: "/Project16.png",
     title: "EngChamp",
     url: "https://engchamp.com/",
